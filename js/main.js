@@ -1,3 +1,6 @@
+
+
+
 (function () {
     const header = document.querySelector('.header');
     window.onscroll = () => {
@@ -13,13 +16,21 @@
 
 (function () {
     const burgerItem = document.querySelector('.burger');
-    const menu = document.querySelector('.header__nav');
-    const menuCloseItem = document.querySelector('header__nav-close');
+    const menu = document.querySelector('.header__nav ');
+    const menuCloseItem = document.querySelector('.header__nav-close');
     burgerItem.addEventListener('click', () => {
-        menu.classList.add('header__nav_active');
+       menu.classList.add('header__nav_active');
     });
-    menuCloseItem.add('click', () => {
-        menu.classList.remove('header__nav_active');
+    menuCloseItem.addEventListener('click', () => {
+        menu.classList.remove   ('header__nav_active');
     });
-
 }());
+
+
+function summa(){
+    let name;
+    name = document.getElementById('search-form__field').value;
+    alert(name);
+}
+
+

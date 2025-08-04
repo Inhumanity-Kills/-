@@ -59,12 +59,12 @@ table {
   font-family: 'Lato';
   font-style: normal;
   font-weight: 400;
-  src: url('../fonts/lato-v24-latin-regular.eot'); /* IE9 Compat Modes */
-  src: url('../fonts/lato-v24-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/lato-v24-latin-regular.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-       url('../fonts/lato-v24-latin-regular.woff') format('woff'), /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+, iOS 5+ */
-       url('../fonts/lato-v24-latin-regular.ttf') format('truetype'), /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
-       url('../fonts/lato-v24-latin-regular.svg#Lato') format('svg'); /* Legacy iOS */
+  src: url('../font/lato-v24-latin-regular.eot'); /* IE9 Compat Modes */
+  src: url('../font/lato-v24-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../font/lato-v24-latin-regular.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+       url('../font/lato-v24-latin-regular.woff') format('woff'), /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+, iOS 5+ */
+       url('../font/lato-v24-latin-regular.ttf') format('truetype'), /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+       url('../font/lato-v24-latin-regular.svg#Lato') format('svg'); /* Legacy iOS */
 }
 /* lato-700 - latin */
 @font-face {
@@ -72,12 +72,12 @@ table {
   font-family: 'Lato';
   font-style: normal;
   font-weight: 700;
-  src: url('../fonts/lato-v24-latin-700.eot'); /* IE9 Compat Modes */
-  src: url('../fonts/lato-v24-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/lato-v24-latin-700.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-       url('../fonts/lato-v24-latin-700.woff') format('woff'), /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+, iOS 5+ */
-       url('../fonts/lato-v24-latin-700.ttf') format('truetype'), /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
-       url('../fonts/lato-v24-latin-700.svg#Lato') format('svg'); /* Legacy iOS */
+  src: url('../font/lato-v24-latin-700.eot'); /* IE9 Compat Modes */
+  src: url('../font/lato-v24-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../font/lato-v24-latin-700.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+       url('../font/lato-v24-latin-700.woff') format('woff'), /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+, iOS 5+ */
+       url('../font/lato-v24-latin-700.ttf') format('truetype'), /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+       url('../font/lato-v24-latin-700.svg#Lato') format('svg'); /* Legacy iOS */
 }
 /* lato-900 - latin */
 @font-face {
@@ -85,17 +85,20 @@ table {
   font-family: 'Lato';
   font-style: normal;
   font-weight: 900;
-  src: url('../fonts/lato-v24-latin-900.eot'); /* IE9 Compat Modes */
-  src: url('../fonts/lato-v24-latin-900.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/lato-v24-latin-900.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-       url('../fonts/lato-v24-latin-900.woff') format('woff'), /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+, iOS 5+ */
-       url('../fonts/lato-v24-latin-900.ttf') format('truetype'), /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
-       url('../fonts/lato-v24-latin-900.svg#Lato') format('svg'); /* Legacy iOS */
+  src: url('../font/lato-v24-latin-900.eot'); /* IE9 Compat Modes */
+  src: url('../font/lato-v24-latin-900.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../font/lato-v24-latin-900.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+       url('../font/lato-v24-latin-900.woff') format('woff'), /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+, iOS 5+ */
+       url('../font/lato-v24-latin-900.ttf') format('truetype'), /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+       url('../font/lato-v24-latin-900.svg#Lato') format('svg'); /* Legacy iOS */
 }
 
 
 html{
     box-sizing: border-box;
+    overflow-x:hidden;
+  
+    
 }
 *, *::before, *::after{
     box-sizing: inherit;
@@ -189,6 +192,9 @@ img{
 }
 .header__link:hover,.header__link:focus, .header__link:active{
     opacity: .75;
+}
+.header__nav_active{
+    overflow-x:hidden;
 }
 
 .header__burger{
@@ -704,10 +710,12 @@ img{
     }
     .benefits__title{
         padding: 55px 15px ;
+        border: 0px;
     }
     .benefits__wrap{
         box-shadow: none;
     }
+    .places__title
 
     .places__card__size_lg{
         grid-column: span 6;
@@ -767,7 +775,7 @@ img{
         transition: .2s all linear;
     }
     .header__nav_active{
-          transform: translateX(0%);
+          transform: translateX(0);
     }
 
     .header__item{
@@ -797,6 +805,7 @@ img{
         height: 2px;
         background-color: white;
         position: absolute;
+        top: 50%;
 
     }
     .header__nav-close-line:first-child{
@@ -843,6 +852,8 @@ img{
     }
     .places-view-all{
        padding-top: 15px;
+       padding-left: 25px;
+       
     }
     .tour__title{
         font-size: 17px;
@@ -871,9 +882,60 @@ img{
     flex-wrap: wrap;
     margin-left: 10px;
 }
-
-
-
+.main{
+   align-items: center;
+   
+}
+.header__active{
+    width: 100%;
+}
+.wrapper__full{
+    padding:0px;
+}
+.footer{
+    width: 100%;
+}
+.section__title{
+    margin-left: 25px;
+}
+.benefits__title{
+    display: flex;
+    justify-content: center;
+}
+.places__cards{
+   display: block;
+}
+.tours__tour{
+    padding-left: 16px;
+        padding-right: 16px;
+}
+.top__card-more{
+    margin-left:10px ;
+}
+.top__card-desc{
+    margin-left: 10px;
+}
+.tour__info{
+            padding-right: 186px;
+}
+body{
+    overflow-x: hidden;
+}
+.header__wrapper{
+   
+}
+.header__active{
+    
+    overflow-x:hidden;
+}
+.header__nav-close{
+    position:absolute;
+    top: 10px;
+    right:2px;
+}
+.header__nav_active{
+    overflow: hidden;
+}
 
 
 
